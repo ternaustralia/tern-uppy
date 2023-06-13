@@ -1,8 +1,8 @@
-/* @jsx h */
-import { h } from "preact";
+
 import { UIPlugin } from "@uppy/core";
 import { Provider } from "@uppy/companion-client";
 import { ProviderViews } from "@uppy/provider-views";
+import { h } from 'preact'
 
 import logo from "./asdc.png";
 
