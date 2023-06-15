@@ -1,20 +1,10 @@
 import { resolve } from 'node:path'
 
-import preact from "@preact/preset-vite";
 import { defineConfig } from 'vite'
-// import EsLint from 'vite-plugin-linter'
-// const { EsLinter, linterPlugin } = EsLint
 import * as packageJson from './package.json'
 
 // https://vitejs.dev/config/
 export default defineConfig((configEnv) => ({
-  plugins: [
-    preact(),
-    // linterPlugin({
-    //   include: ['./src}/**/*.{ts,tsx}'],
-    //   linters: [new EsLinter({ configEnv })],
-    // }),
-  ],
   build: {
     lib: {
      // TODO: pkg.source ... or simila r?

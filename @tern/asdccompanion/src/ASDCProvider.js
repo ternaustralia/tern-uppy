@@ -22,10 +22,15 @@ export class ASDCProvider extends Provider {
   // static version = 2
 
   // used in /connect/<provider>
-  authProvider = "asdc";
+  static get authProvider() {
+    return "asdc";
+  }
 
   constructor(options) {
     super(options);
+    this.authProvider = ASDCProvider.authProvider
+
+    // make url building easier
     this.baseUrl = options.baseUrl || DEFAULT_BASE_URL;
     // console.log("CONSTRUCT: ", options);
   }

@@ -1,8 +1,9 @@
-
+/** @jsx h */
+import { h } from 'preact'
 import { UIPlugin } from "@uppy/core";
 import { Provider } from "@uppy/companion-client";
 import { ProviderViews } from "@uppy/provider-views";
-import { h } from 'preact'
+
 
 import logo from "./asdc.png";
 
@@ -35,6 +36,9 @@ export class ASDC extends UIPlugin {
         pluginNameASDC: "ASDC",
       },
     };
+
+    // merge default options with the ones set by user
+    // this.opts = { ...defaultOptions, ...opts }
 
     this.i18nInit();
     this.title = this.i18n("pluginNameASDC");
